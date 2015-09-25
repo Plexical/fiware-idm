@@ -1,0 +1,15 @@
+#!/bin/sh
+if [ -f "./bin/pip" ]; then
+    echo 'Bootstrap already done'
+else
+    echo 'Bootstrapping started..'
+    (cd ~/src/plexical && git pull)
+    virtualenv .
+    ./bin/pip install -e ~/src/plexical/py
+    ./bin/pip install fabric
+    ./bin/pip install paver
+    ./bin/python setup.py develop
+    cp conf/settings.py.example conf/settings.py
+    px pip install -r requirements.txt
+    px pip install -r ../webapp/development.txt
+fi

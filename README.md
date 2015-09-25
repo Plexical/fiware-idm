@@ -6,6 +6,7 @@
 + [How to Update](#def-update)
 + [API Overview](#def-api)
 + [Advanced documentation](#def-advanced)
++ [About the `pleathub-cust` fork](#def-fork)
 
 ---
 
@@ -166,3 +167,16 @@ You will find the full API description [here](http://docs.keyrock.apiary.io/)
   - [How to run tests](http://fiware-idm.readthedocs.org/en/latest/admin_guide#end-to-end-testing)
   - [Using the FIWARE LAB instance (OAuth2)](http://fiware-idm.readthedocs.org/en/latest/oauth2/)
   - [Developers and contributors Guide](http://fiware-idm.readthedocs.org/en/latest/developer_guide/)
+
+<a name="def-advanced"></a>
+## About the `pleathub-cust` fork
+
+This fork is created to host the customizations needed to run this
+version of IDM for the purposes of the [Pleathub][ph-link]
+project. Sorry - but it's not indended for public consumtion since it
+assumes that the Plexical in-house Python library and the Pletahub
+development environment is installed in known locations beside the
+working directory of this fork. So: *you can inspect, but won't be able
+to use.*
+
+[ph-link]: https://pleathub.com

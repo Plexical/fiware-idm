@@ -21,6 +21,19 @@ from fabric.api import task
 from fabric.operations import local as lrun
 from fabric.colors import red,green
 
+# Pleathub customizations start
+
+import os
+
+from plexical.ops import config
+
+settings_ = config.load('../webapp/pleathub.ini')
+os.environ.update(settings_.mergeable('dev'))
+
+from phtasks import dev
+dev.settings = settings_
+
+# Pleathub customizations end
 
 @task
 def localhost():
@@ -36,14 +49,14 @@ def set_up(dev=False):
 def _install_dependencies():
     command = settings.UBUNTU_DEPENDENCIES['install_command']
     dependencies = ' '.join(settings.UBUNTU_DEPENDENCIES['dependencies'])
-    lrun('{command} {dependencies}'.format(command=command, 
+    lrun('{command} {dependencies}'.format(command=command,
         dependencies=dependencies))
     print 'Dependencies correctly installed'
 
 @task
 def update_all(keystone_path=settings.KEYSTONE_ROOT, horizon_path=settings.HORIZON_ROOT):
     """Update both the Front and the Back-end, as well as their dependencies."""
-    update1_ok = keystone.update(keystone_path) 
+    update1_ok = keystone.update(keystone_path)
     update2_ok = horizon.update(horizon_path)
 
     if not update1_ok or not update2_ok:

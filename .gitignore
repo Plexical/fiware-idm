@@ -61,3 +61,10 @@ fiwareclient/
 # Settings
 conf/settings.py
 conf/service_catalog.py
+
+# Pleathub customizations ignores
+/bin/
+/lib/
+/include/
+/share/
+.Python
