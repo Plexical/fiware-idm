@@ -168,7 +168,7 @@ You will find the full API description [here](http://docs.keyrock.apiary.io/)
   - [Using the FIWARE LAB instance (OAuth2)](http://fiware-idm.readthedocs.org/en/latest/oauth2/)
   - [Developers and contributors Guide](http://fiware-idm.readthedocs.org/en/latest/developer_guide/)
 
-<a name="def-advanced"></a>
+<a name="def-fork></a>
 ## About the `pleathub-cust` fork
 
 This fork is created to host the customizations needed to run this
