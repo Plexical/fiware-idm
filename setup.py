@@ -5,6 +5,5 @@ setup(
     packages=('conf', 'deployment',),
     include_package_data=True,
     zip_safe=False,
-    author='Jacob Oscarson',
-    author_email='jacob@plexical.com',
+    author='Grupo de Internet de Nueva Generación',
     version='0.0.1')
